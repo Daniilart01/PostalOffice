@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox prefHeight="600.0" prefWidth="1523.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.nure.postalOffice.Application.AdminController">
+    <children>
+        <TabPane prefHeight="600.0" prefWidth="1443.0" style="-fx-background-color: #b0aa9b;" tabClosingPolicy="UNAVAILABLE">
+            <tabs>
+                <Tab onSelectionChanged="#resizePackages" text="Accepted Packages">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <TableView fx:id="packageTableView" layoutY="53.0" prefHeight="518.0" prefWidth="1422.0">
+                                    <columns>
+                                        <TableColumn prefWidth="88.20001524686813" text="ID" />
+                                        <TableColumn prefWidth="96.80001831054688" text="Sender" />
+                                        <TableColumn prefWidth="92.39997863769531" text="Receiver" />
+                                        <TableColumn prefWidth="77.5999755859375" text="Status" />
+                                        <TableColumn prefWidth="98.20001220703125" text="Date departure" />
+                                        <TableColumn prefWidth="95.5999755859375" text="Date receiving" />
+                                        <TableColumn prefWidth="103.60003662109375" text="Senders Office" />
+                                        <TableColumn prefWidth="103.39996337890625" text="City" />
+                                        <TableColumn prefWidth="114.800048828125" text="Country" />
+                                        <TableColumn prefWidth="103.0" text="Phone" />
+                                        <TableColumn prefWidth="115.199951171875" text="Receivers Office" />
+                                        <TableColumn prefWidth="96.5999755859375" text="City" />
+                                        <TableColumn prefWidth="114.0" text="Country" />
+                                        <TableColumn prefWidth="115.0" text="Phone" />
+                                    </columns>
+                                </TableView>
+                                <TextField fx:id="searchText" layoutX="26.0" layoutY="14.0" prefHeight="26.0" prefWidth="231.0" promptText="Enter search request here..." />
+                                <Button graphicTextGap="10.0" layoutX="454.0" layoutY="14.0" mnemonicParsing="false" onAction="#searchPackagesButtonPressed" text="Search">
+                                    <font>
+                                        <Font name="System Bold" size="12.0" />
+                                    </font>
+                                </Button>
+                                <ComboBox fx:id="searchOptions" layoutX="279.0" layoutY="14.0" prefWidth="150.0" promptText="Search options" />
+                                    <Button focusTraversable="false" layoutX="1458.0" layoutY="496.0" mnemonicParsing="false" onAction="#fixPackageButtonPressed" text="Fix" />
+                                    <Button focusTraversable="false" layoutX="1450.0" layoutY="531.0" mnemonicParsing="false" onAction="#deletePackageButtonPressed" text="Delete" />
+                                  <Label fx:id="errorLabelPackages" layoutX="530.0" layoutY="13.0" prefHeight="28.0" prefWidth="0.0" textFill="RED">
+                                      <font>
+                                          <Font name="System Bold" size="19.0" />
+                                      </font>
+                                  </Label>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab onSelectionChanged="#resizeWaitingPackages" text="Unaccepted Packages">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <TableView fx:id="waitingPackageTableView" prefHeight="532.0" prefWidth="616.0">
+                                    <columns>
+                                        <TableColumn prefWidth="88.20001524686813" text="ID" />
+                                        <TableColumn prefWidth="96.80001831054688" text="Sender" />
+                                        <TableColumn prefWidth="92.39997863769531" text="Receiver" />
+                                        <TableColumn prefWidth="103.60003662109375" text="Senders Office" />
+                                        <TableColumn prefWidth="115.199951171875" text="Receivers Office" />
+                                        <TableColumn prefWidth="115.0" text="Date Creating" />
+                                    </columns>
+                                </TableView>
+                                <Button layoutX="530.0" layoutY="538.0" mnemonicParsing="false" onAction="#acceptWaitingPackageButtonPressed" text="Accept" />
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab onSelectionChanged="#resizeUsers" text="Users">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <TableView fx:id="usersTableView" prefHeight="531.0" prefWidth="406.0">
+                                    <columns>
+                                        <TableColumn prefWidth="152.39999693632126" text="Username" />
+                                        <TableColumn prefWidth="160.1999969482422" text="Password" />
+                                        <TableColumn prefWidth="89.80001831054688" text="Role" />
+                                    </columns>
+                                </TableView>
+                                <BorderPane layoutY="531.0" prefHeight="42.0" prefWidth="406.0">
+                                    <right>
+                                        <Button mnemonicParsing="false" onAction="#deleteUserButtonPressed" text="Delete" BorderPane.alignment="CENTER" />
+                                    </right>
+                                    <center>
+                                        <Label fx:id="errorLabelUsers" textFill="RED" BorderPane.alignment="CENTER">
+                                            <font>
+                                                <Font name="System Bold" size="15.0" />
+                                            </font>
+                                        </Label>
+                                    </center>
+                                    <padding>
+                                        <Insets right="20.0" />
+                                    </padding>
+                                </BorderPane>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </children>
+</VBox>
