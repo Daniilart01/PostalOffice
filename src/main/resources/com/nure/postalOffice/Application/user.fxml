@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" prefHeight="600.0" prefWidth="800.0" spacing="10" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.nure.postalOffice.Application.UserController">
+   <AnchorPane prefHeight="613.0" prefWidth="1422.0" style="-fx-background-color: #b0aa9b;">
+      <children>
+         <TableView fx:id="sentParcelsTableView" layoutX="104.0" layoutY="25.0" prefHeight="242.0" prefWidth="662.0">
+           <columns>
+             <TableColumn prefWidth="93.19999694824219" text="ID" />
+             <TableColumn prefWidth="102.60000610351562" text="Receiver" />
+               <TableColumn prefWidth="128.0" text="Receiver Department" />
+               <TableColumn minWidth="0.0" prefWidth="111.60000610351562" text="Date Departure" />
+               <TableColumn minWidth="5.20001220703125" prefWidth="109.0" text="Date Receiving" />
+               <TableColumn prefWidth="115.19998779296873" text="Status" />
+           </columns>
+         </TableView>
+         <Label layoutX="14.0" layoutY="27.0" prefHeight="74.0" prefWidth="102.0" text="Sent parcels:" wrapText="true">
+            <font>
+               <Font name="System Bold" size="22.0" />
+            </font></Label>
+         <Label layoutX="14.0" layoutY="273.0" prefHeight="74.0" prefWidth="89.0" text="Your parcels:" wrapText="true">
+            <font>
+               <Font name="System Bold" size="22.0" />
+            </font>
+         </Label>
+         <TableView fx:id="receivingParcelsTableView" layoutX="104.0" layoutY="278.0" prefHeight="242.0" prefWidth="662.0">
+            <columns>
+               <TableColumn prefWidth="93.19999694824219" text="ID" />
+               <TableColumn prefWidth="102.60000610351562" text="Sender" />
+               <TableColumn prefWidth="140.0" text="Receiving Department" />
+               <TableColumn minWidth="0.0" prefWidth="107.99996948242188" text="Date Departure" />
+               <TableColumn minWidth="5.20001220703125" prefWidth="101.60003662109375" text="Date Receiving" />
+               <TableColumn prefWidth="114.39999999999998" text="Status" />
+            </columns>
+         </TableView>
+         <Button layoutX="694.0" layoutY="547.0" mnemonicParsing="false" onAction="#createParcelButtonPressed" prefHeight="32.0" prefWidth="71.0" text="Create " textAlignment="CENTER" wrapText="true" />
+         <Hyperlink layoutX="14.0" layoutY="545.0" onAction="#exitButtonPressed" prefHeight="35.0" prefWidth="51.0" text="Exit">
+            <font>
+               <Font size="18.0" />
+            </font>
+         </Hyperlink>
+      </children></AnchorPane>
+</VBox>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox prefHeight="200.0" prefWidth="373.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.nure.postalOffice.Application.CreatePackController">
+    <children>
+        <AnchorPane prefHeight="405.0" prefWidth="600.0" style="-fx-background-color: #b0aa9b;">
+            <children>
+                <Label layoutX="14.0" layoutY="123.0" text="Receiver Department:">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                </Label>
+                <Label layoutX="14.0" layoutY="91.0" text="Sender Department:">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                </Label>
+                <Label layoutX="13.0" layoutY="57.0" text="Receiver:">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                </Label>
+                <ComboBox fx:id="senderDepartmentBox" layoutX="199.0" layoutY="88.0" prefHeight="26.0" prefWidth="161.0" />
+                <ComboBox fx:id="receiverDepartmentBox" layoutX="210.0" layoutY="121.0" prefWidth="150.0" />
+                <Button layoutX="321.0" layoutY="161.0" mnemonicParsing="false" onAction="#saveButtonPressed" text="Add" />
+            <TextField fx:id="receiverTextField" layoutX="121.0" layoutY="54.0" prefHeight="26.0" prefWidth="240.0" />
+            <BorderPane layoutX="18.0" layoutY="154.0" prefHeight="39.0" prefWidth="275.0">
+               <center>
+                  <Label fx:id="errorLabel" textFill="RED" BorderPane.alignment="CENTER" />
+               </center>
+            </BorderPane>
+            <Label layoutX="81.0" layoutY="2.0" text="Create Package">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Label>
+            </children>
+        </AnchorPane>
+    </children>
+</VBox>

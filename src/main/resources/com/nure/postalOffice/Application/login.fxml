@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox prefHeight="300.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.nure.postalOffice.Application.LoginController">
+   <children>
+      <AnchorPane prefHeight="308.0" prefWidth="518.0" style="-fx-background-color: #b0aa9b;">
+         <children>
+            <Label layoutX="117.0" layoutY="14.0" prefHeight="46.0" prefWidth="166.0" text="Login form" textAlignment="JUSTIFY">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Label>
+            <PasswordField fx:id="passwordField" layoutX="117.0" layoutY="155.0" prefHeight="26.0" prefWidth="165.0" />
+            <TextField fx:id="usernameField" layoutX="117.0" layoutY="87.0" prefHeight="26.0" prefWidth="166.0" />
+            <Button layoutX="177.0" layoutY="238.0" mnemonicParsing="false" onAction="#loginButtonPressed" text="Login" />
+            <Label layoutX="116.0" layoutY="68.0" prefHeight="18.0" prefWidth="166.0" text="Username:" />
+            <Label layoutX="117.0" layoutY="136.0" prefHeight="18.0" prefWidth="166.0" text="Password:" />
+            <Hyperlink layoutX="14.0" layoutY="264.0" onAction="#registerButtonPressed" text="Registration" />
+            <BorderPane layoutX="-1.0" layoutY="211.0" prefHeight="26.0" prefWidth="400.0">
+               <center>
+                  <Label fx:id="incorrectDataLabel" textFill="RED" BorderPane.alignment="CENTER" />
+               </center>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>
